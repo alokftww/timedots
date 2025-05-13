@@ -1,4 +1,4 @@
-@import '/home/alokinho/.cache/wal/colors-waybar.css';
+@import '/home/$USER/.cache/wal/colors-waybar.css';
 
 @define-color noti-border-color @background;
 @define-color noti-bg @background;
