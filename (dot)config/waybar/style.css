@@ -1,0 +1,95 @@
+@import url("/home/alokinho/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "SF Pro Text", "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-size: 13px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @foreground;
+}
+
+.modules-right {
+    margin-right: 12px;
+}
+
+#workspaces {
+    background-color: @background;
+    padding: 2px 2px 2px 2px;
+    border-radius: 50px;
+    margin-left: 12px;
+}
+
+#workspaces button.active {
+    background-color: @color1;
+    color: @color3;
+    padding: 5px 24px;
+}
+
+#workspaces button.active:hover {
+    color: @foreground;
+    background: inherit;
+}
+
+#workspaces button.empty {
+    color: @color2;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: @background;
+    transition:
+        margin 150ms ease-in-out,
+        padding 150ms ease-in-out;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        padding 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: @surface_container_high;
+}
+
+#workspaces button.urgent {
+    background-color: @error;
+    color: @on_error;
+}
+
+#battery,
+#pulseaudio,
+#backlight,
+#custom-pacman,
+#network,
+#clock,
+#custom-weather,
+#custom-media,
+#window,
+#cpu,
+#memory,
+#disk,
+#tray,
+#custom-launcher,
+#custom-notification,
+#power-profiles-daemon {
+    color: @color2;
+    background-color: @background;
+    padding: 0 15px 0 15px;
+    margin: 0 0 0 12px;
+}
+
+#window.hidden {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
